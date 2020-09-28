@@ -3,7 +3,7 @@
         <style>
             h1{
                 text-align : center;
-                color : orangered;
+                color : orange;
                 padding-top : 2%;
                 font-family: Verdana;
             }
@@ -23,10 +23,13 @@
             }
             .aligncenter{
             text-align:center
+        }.containermarketing{
+            background-color: #F0EEEB;
         }
         </style>
     </head>
-    <body style ="background-color: lightgray;">
+    <body style ="background-color: white;">
+        <div> <!--link css dan js -->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 
         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
@@ -36,25 +39,26 @@
         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+        </div>
         <div>    <!--bagian navbar dan form box-->
             <div> <!--navbar-->
-                <nav class="navbar navbar-expand-lg navbar-light " style ="background-color : orangered">
+                <nav class="navbar navbar-expand-lg navbar-light " style ="background-color : orange">
                     <img src="logo.png" width="30" height="30" alt="" loading="lazy">
-                    <a class="navbar-brand" href="#">TirtZerzBrez</a> 
+                    <a class="navbar-brand" href="urlshort.html">TirtZerzBrez</a> 
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                     </button>
-                
+
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav mr-auto">
                         <li class="nav-item active">
-                        <a class="nav-link" href="#">Beranda <span class="sr-only">(current)</span></a>
+                        <a class="nav-link" href="urlshort.html">Beranda <span class="sr-only">(current)</span></a>
                         </li>
                         <li class="nav-item">
-                        <a class="nav-link" href="#">Petunjuk</a>
+                        <a class="nav-link" href="petunjuk.html">Petunjuk</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Tentang Kami</a>
+                            <a class="nav-link" href="aboutus.html">Tentang Kami</a>
                         </li>
                     
                 </nav>
@@ -67,8 +71,8 @@
                     <div class = "urlshort">
                         <form action="/action_page.php">
                             <label for="homepage"></label>
-                            <input type="url" id="homepage" name="homepage" size="70" placeholder="masukkan link disini"><br><br>
-                            <input type="submit" value="Shorten!" size="30">
+                            <input type="url" id="homepage" name="homepage" size="100" placeholder="masukkan link disini" style ="border-radius : 4px;"><br><br>
+                            <input type="submit" value="Shorten!" size="30" style = "background-color: orange; color :white; border-radius:8px; padding :14px 40px; font-size:24px">
                         </form>
                 </div>
                 </form>
@@ -79,7 +83,7 @@
         <div> <!-- bagian jmlh pengunjung, jmlh url, help button -->
             <div class="container">
                 <div class="row" >
-                    <div class="col-sm mx-3 px-4 py-3 border rounded"style ="background-color: white;">
+                    <div class="col-sm mx-3 px-4 py-3 border rounded"style ="background-color: #F0EEEB;">
                         <div class="row">
                         <div class="col-sm">
                             <h5 class="text-success font-weight-bolder size">
@@ -96,7 +100,7 @@
                         </div>
                         </div>
                     </div>
-                    <div class="col-sm mx-3 px-4 py-3 border rounded"style ="background-color: white;">
+                    <div class="col-sm mx-3 px-4 py-3 border rounded"style ="background-color: #F0EEEB;">
                         <div class="row">
                         <div class="col-sm px-3">
                             <h5 class="text-success font-weight-bolder">
@@ -113,7 +117,7 @@
                         </div>
                         </div>
                     </div>
-                    <div class="col-sm mx-3 px-5 py-3 border rounded"style ="background-color: white;">
+                    <div class="col-sm mx-3 px-5 py-3 border rounded"style ="background-color: #F0EEEB;">
                         <div class="row">
                         <div class="col-sm">
                                 <h5 class="text-success font-weight-bolder">
@@ -132,8 +136,9 @@
                 </div>  
             </div>
         </div>
-        <br><br><br><br>
-        <div class="container marketing">
+<footer>
+        <br><br><br><br><br><br>
+        <div class="containermarketing">
         <!-- Three columns of text below the carousel -->
             <div class="row">
               <div class="col-lg-4">
@@ -170,5 +175,11 @@
                 <p class="aligncenter">mudah dan aman digunakan tanpa menggunakan link ke sosial media anda</p>
               </div><!-- /.col-lg-4 -->
             </div><!-- /.row -->
-    </body>
+        </footer>
+        <div class="btn-group-center" role="group" aria-label="Basic example">
+            <button type="button" class="btn btn-light">Terms of Service</button>
+            <button type="button" class="btn btn-light">Privacy</button>
+            <button type="button" class="btn btn-light">Contact</button>
+          </div> 
+        </body>
 </html>
