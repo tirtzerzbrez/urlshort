@@ -1,5 +1,45 @@
 <html>
-    <title>AboutUS</title>
+    <head>
+      <style>
+          h1{
+              text-align : center;
+              color : orange;
+              padding-top : 2%;
+              font-family: Verdana;
+          }
+          h2{
+              text-align : center;
+              color:gray;
+              padding-top: 20px;
+              font-family :Georgia, 'Times New Roman', Times, serif;
+          }
+          .urlshort{
+              text-align :center;
+              padding-top : 1%;
+          }
+          .box{
+              border-width: 2px;
+              border-color:red;
+          }
+          .aligncenter{
+          text-align:center
+          }
+          .containermarketing{
+              background-color: #F0EEEB;
+          }
+          .btn-group-center
+              {
+                  text-align :center;
+                  background-color: darkslategray;
+                  padding-top :2%;
+                  padding-bottom:2%;
+              }
+          #fontfam{
+          font-family:Verdana, Arial, Tahoma, Serif;
+          }
+      </style>
+    </head>
+
     <div> <!--link css dan js -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
@@ -31,47 +71,110 @@
                     <li class="nav-item active">
                     <a class="nav-link" href="urlshort.html">Beranda <span class="sr-only">(current)</span></a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item active">
                     <a class="nav-link" href="petunjuk.html">Petunjuk</a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item active">
                         <a class="nav-link" href="aboutus.html">Tentang Kami</a>
+
                     </li>
                 
             </nav>
         </div>
     </div>
-    <div>
-
-              <div style="margin-top: 1.2cm;">
-                  <h1 style="font-family: Verdana, Geneva, Tahoma, sans-serif;color: orange; text-align: center; font-size: 3em;">Tentang kami</h1>
-                  <br><br>
-                  <div style="margin-left: 1cm; margin-right: 1cm;">
-                    <h2 style="font-family: Verdana, Geneva, Tahoma, sans-serif;outline-color: orange 20px;">Anggota</h2>
-                    <p>
-                      tim developer projek Url shortener ini terdiri dari 5 mahasiswa Universitas Tarumanegara Fakultas Teknologi Informasi. Berikut informasi singkat tentang anggota kami</p>
-                    <ul>
-                      <li>Hizkia Halim 535190001</li>
-                      <li>Arya Prawira 535190024</li>
-                      <li>Vincent Fernandes 535190024</li>
-                      <li>Catur Ariya 535190024</li>
-                      <li>Jason Benedict 535190024</li>
-                    </ul>
-                    <br><h2>Tujuan</h2>
-                    <p>Web Shortener adalah sebuah web yang bertujuan untuk memudahkan sebuah user yang mempunyai sebuah link yang sebelumnya panjang dan susah untuk diingat menjadi lebih singkat dan mudah diingat. dengan memperpendek sebuah URL, maka URL tersebut semakin mudah untuk disebarkan dan diingat.</p>
-                    <br><h2>Aplikasi</h2> 
-                    <p>Aplikasi yang kami gunakan dalam pembuatan Web Shortener ini adalah Visual Studio Code (VSC). alasan kami menggunakan VSC karena tampilan VSC yang user-friendly dan pada saat kami mengerjakan projek kami ini kebetulan kami sedang mengunakan Visual Studio Code (VSC)</p>
-                    <br><h2>Tanggal & Tempat</h2>
-                    <p>Projek ini kami kerjakan di rumah masing-masing karena kondisi pandemic yang tidak memungkinkan melakukan tatap muka. kami mengerjakan projek ini selama kurang lebih satu bulan yaitu dari pertengahan bulan September dan menyelesaikannya sampai pertengahan bulan Oktober.</p>
-                  </div>
+    <div id="fontfam"> <!--bagian isi about us-->
+        <div class="accordion" id="accordionExample">
+            <div class="card">
+              <div class="card-header" id="headingOne">
+                <h3 class="mb-0">
+                  <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                    Tentang Developer
+                  </button>
+                </h3>
               </div>
-              <br><br><br>
-              
-              <div class="btn-group-center" role="group" aria-label="Basic example">
-                <p style ="text-align: center;">TirtZerzBrez 2020-Universitas Tarumanegara</p>
-                <button type="button" class="btn btn" style="color :whitesmoke">Terms of Service</button>
-                <button type="button" class="btn btn" style="color :whitesmoke">Privacy</button>
-                <a href="contact.html" class="btn btn" style="color :whitesmoke">Contact</a>
-              </div> 
+          
+              <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                <div class="card-body">
+                  Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-header" id="headingTwo">
+                <h3 class="mb-0">
+                  <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    Cerita Proses Developing
+                  </button>
+                </h3>
+              </div>
+              <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                <div class="card-body">
+                  Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-header" id="headingThree">
+                <h3 class="mb-0">
+                  <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                    Alasan dan Tujuan Pembuatan Layanan Ini
+                  </button>
+                </h3>
+              </div>
+              <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                <div class="card-body">
+                  Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                </div>
+              </div>
+            </div>
+          </div>
     </div>
+    <div> <!--bagian paling bawah-->
+      <footer>
+          <br><br><br><br><br><br>
+          <div class="containermarketing">
+          <!-- Three columns of text below the carousel -->
+              <div class="row">
+                <div class="col-lg-4">
+                  <img src="thumb.svg" height="50px" style="display:block; margin-left: auto; margin-right: auto;">
+                  <h2 class="aligncenter">Mudah</h2>
+                  <p class="aligncenter">Tampilan mudah digunakan</p>
+                </div><!-- /.col-lg-4 -->
+                <div class="col-lg-4">
+                  <img src="payment-24px.svg" height="50px" style="display:block; margin-left: auto; margin-right: auto;">
+                  <h2 class="aligncenter">Gratis</h2>
+                  <p class="aligncenter">Tanpa biaya tambahan</p>
+                </div><!-- /.col-lg-4 -->
+                <div class="col-lg-4">
+                  <img src="shield.svg" height="50px" style="display:block; margin-left: auto; margin-right: auto;">
+                  <h2 class="aligncenter">Aman</h2>
+                  <p class="aligncenter">cepat dan aman,Semua informasi anda terenkripsi dengan aman</p>
+                </div><!-- /.col-lg-4 -->
+              </div><!-- /.row -->
+              <br><br>
+              <div class="row">
+                <div class="col-lg-4">
+                  <img src="chain.svg" height="50px" style="display:block; margin-left: auto; margin-right: auto;">
+                  <h2 class="aligncenter">memperpendek link</h2>
+                  <p class="aligncenter">paste link anda untuk dipendekkan</p>
+                </div><!-- /.col-lg-4 -->
+                <div class="col-lg-4">
+                  <img src="bar_chart-24px.svg" height="50px" style="display:block; margin-left: auto; margin-right: auto;">
+                  <h2 class="aligncenter">Statistik</h2>
+                  <p class="aligncenter">lihat berapa banyak orang yang sudah menggunakan URL shortener ini</p>
+                </div><!-- /.col-lg-4 -->
+                <div class="col-lg-4">
+                  <img src="person_remove-24px.svg" height="50px" style="display:block; margin-left: auto; margin-right: auto;">
+                  <h2 class="aligncenter">Privat</h2>
+                  <p class="aligncenter">mudah dan aman digunakan tanpa menggunakan link ke sosial media anda</p>
+                </div><!-- /.col-lg-4 -->
+              </div><!-- /.row -->
+          </footer>
+    </div>
+    <div class="btn-group-center" role="group" aria-label="Basic example">
+      <p style ="text-align: center;">TirtZerzBrez 2020-Universitas Tarumanegara</p>
+      <button type="button" class="btn btn" style="color :whitesmoke">Terms of Service</button>
+      <button type="button" class="btn btn" style="color :whitesmoke">Privacy</button>
+      <button type="button" class="btn btn" style="color :whitesmoke">Contact</button>
+  </div>
 </html>
