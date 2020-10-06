@@ -13,7 +13,7 @@
                 text-align : center;
                 color:darkgray;
                 padding-top: 20px;
-                font-family :Georgia, 'Times New Roman', Times, serif;
+                font-family :Verdana;
             }
             .urlshort{
                 text-align :center;
@@ -40,10 +40,10 @@
             padding-bottom:2%;
         }
         #fontfam{
-            font-family:Verdana, Arial, Tahoma, Serif;
+            font-family:Verdana;
         }
         #fontfam2{
-            font-family:'Calibri, 'Trebuchet MS', sans-serif, Gill Sans', 'Gill Sans MT';
+            font-family:Verdana;
         }
         </style>
     </head>
@@ -95,8 +95,14 @@
                         <form action="/action_page.php">
                             <label for="homepage"></label>
                             <input type="url" id="homepage" name="homepage" size="80" placeholder="masukkan link disini" style ="border-radius : 4px; height: 50px;"><br><br>
-                            <input type="submit" value="Shorten!" size="30" style = "background-color: orange; color :white; border-radius:8px; padding :14px 40px; font-size:24px">
                         </form>
+                        <button onclick="myFunction()"size="30" style = "background-color: orange; color :white; border-radius:8px; padding :14px 40px; font-size:24px">Shorten!</button>
+
+                        <script>
+                            function myFunction() {
+                            alert("Error Layanan masih belom tersedia");
+                            }
+                            </script>
                 </div>
                 </form>
             </div>  
