@@ -1,51 +1,76 @@
 <html>
     <head>
       <style>
-        p{
-          font-family: Verdana
-          ;
-          line-height: 26px;
-          font-size: large;
+        h1{
+                text-align : center;
+                color : orange;
+                padding-top : 2%;
+                font-family: Verdana;
+                
+            }
+            h2{
+                text-align : center;
+                color:#ffffff;
+                padding-top: 20px;
+                font-family :Verdana;
+            }
+            p{
+                font-family: verdana;
+            }
+            .urlshort{
+                text-align :center;
+                padding-top : 1%;
+                padding-left:30%;
+                padding-right: 30%;
+            }
+            .box{
+                border-width: 2px;
+                border-color:red;
+            }
+            .aligncenter{
+            text-align:center
         }
-          h1{
-              text-align : center;
-              color : orange;
-              padding-top : 2%;
-              font-family: Verdana;
-          }
-          h2{
-              text-align : center;
-              color:gray;
-              padding-top: 20px;
-              font-family :Verdana;
-          }
-          .urlshort{
-              text-align :center;
-              padding-top : 1%;
-          }
-          .box{
-              border-width: 2px;
-              border-color:red;
-          }
-          .aligncenter{
-          text-align:center
-          }
-          .containermarketing{
-              background-color: #F0EEEB;
-          }
-          .btn-group-center
-              {
-                  text-align :center;
-                  background-color: darkslategray;
-                  padding-top :2%;
-                  padding-bottom:2%;
-              }
-          #fontfam{
-          font-family:Verdana;
-          }
-          p{
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-          }
+        .containermarketing{
+            background-color: #F0EEEB;
+            padding-top : 20px;
+            padding-right : 15px;
+            padding-bottom : 30px;
+        }
+        .btn-group-center
+        {
+            text-align :center;
+            padding-top :0.5%;
+            padding-bottom:0.5%;
+        }
+        #fontfam{
+            font-family:Verdana;
+        }
+        #fontfam2{
+            font-family:arial;
+        }
+        
+        .button{
+            background-color: rgb(26, 132, 182);
+            border-radius:8px;
+            padding :10% 20%;
+            font-size:20px;
+            cursor: pointer;
+            transition-duration: 0.4s;
+        }
+        .button:hover{
+            background-color: rgb(18, 101, 139);
+        }
+
+        .button2{
+            color: whitesmoke;
+            padding: 15px 15px;
+            margin: 2px 2px;
+            text-decoration: none;
+        }
+        
+        .button2:hover{
+            color: orange;
+            text-decoration: none;}
       </style>
     </head>
 
@@ -66,30 +91,41 @@
     </style>
 
     </div>
-    <div id="fontfam">    <!--bagian navbar -->
+    <div id="fontfam">    <!--bagian navbar dan form box-->
       <div> <!--navbar-->
-        <nav class="navbar navbar-expand-lg navbar-light " style ="background-color : orange">
-            <img src="../pic/logo.png" width="30" height="30" alt="" loading="lazy">
-            <a class="navbar-brand" href="../index.html">TirtZerzBrez</a> 
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-            </button>
+          <nav class="navbar navbar-expand-lg navbar-light " style ="background-color :#0f0f0f">
+              <img src="../pic/logo2.png" width="60" height="60" alt="" loading="lazy">
+              <a class="navbar-brand" href="index.html" style="color: #ffffff; font-size: 1.5em;"><b>TirtZerzBrez</b></a> 
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+              </button>
 
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                <a class="nav-link" href="../index.html">Beranda <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item active">
-                <a class="nav-link" href="petunjuk.html">Petunjuk</a>
-                </li>
-                <li class="nav-item active">
-                    <a class="nav-link" href="aboutus.html">Tentang Kami</a>
-                </li>
-            
-        </nav>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent" style="right: 3%; position: absolute;">
+              <ul class="navbar-nav mr-auto">
+                  <li class="nav-item active">
+                  <a class="button2" href="index.html"><b>Beranda </b> <span class="sr-only">(current)</span></a>
+                  </li>
+                  <li class="nav-item active">
+                  <a class="button2" href="html/petunjuk.html"><b>Petunjuk</b></a>
+                  </li>
+                  <li class="nav-item active">
+                      <a class="button2" href="html/aboutus.html"><b>Tentang Kami</b></a>
+                  </li>
+                  <li class="nav-item dropdown">
+                      <a class="button2" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      <b> Lainnya</b>
+                      </a>
+                      <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="background-color: black;">
+                          <a href="html/termsofservice.html" type="button" class="button2">Terms of Service</a>
+                          <a href="html/Privacy.html" type="button" class="button2">Privacy</a>
+                          <a href="html/contact.html" type="button" class="button2">Contact</a>
+                      </div>
+                    </li>
+              </ul>
+              </div>
+          </nav>
       </div>
-    </div>
+  </div>
     <div id="fontfam"> <!--bagian isi about us-->
         <div class="accordion" id="accordionExample">
             <div class="card">
@@ -174,10 +210,7 @@
           </div><!-- /.row -->
       </footer>
     </div>
-    <div class="btn-group-center" role="group" aria-label="Basic example">
-      <p style ="text-align: center;">TirtZerzBrez 2020-Universitas Tarumanagara</p>
-      <a href="termsofservice.html" type="button" class="btn btn" style="color :whitesmoke">Terms of Service</a>
-      <a href="Privacy.html" type="button" class="btn btn" style="color :whitesmoke">Privacy</a>
-      <a href="contact.html" type="button" class="btn btn" style="color :whitesmoke">Contact</a>
-    </div>
+    <div class="btn-group-center" role="group" aria-label="Basic example" style="background-color: black;">
+      <p style ="text-align: center; color:#a7a7a7">TirtZerzBrez 2020-Universitas Tarumanagara</p>
+  </div>
 </html>
