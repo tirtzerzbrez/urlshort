@@ -86,6 +86,7 @@
                 alert("Error Layanan masih belom tersedia");
             }
             function randomize() {
+                var x = $("input").val;
                 function makeid(length) {
                     var result           = '';
                     var characters       = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
@@ -95,16 +96,16 @@
                     }
                     return result;
                 }
-            rng.replace(makeid(5));
-            alert(rng);
+            x=makeid(6);
+            return x;
             }
             function acak(){
                 if($('.ninja').hasClass("hide")){
                     $('.ninja').removeClass("hide").addClass("show");
+                    $("input").val(randomize());
                 }
                 else{
                     $('.ninja').addClass("hide").removeClass("show");
-                    $("input").val("aqwLOP2wf");
                 }
             }
             function kustom(){
@@ -114,7 +115,6 @@
                 }
                 else{
                     $('.ninja').addClass("hide").removeClass("show");
-                    $("input").val("ju75ryh6a");
                 }
             }
             
@@ -169,7 +169,7 @@
                     <img src="../pic/logo2.png" width="200" heigth="200">
                 </a>
             </h1>
-            <div id="fontfam2" style="background:#2c2c2c; border-radius: 10px; margin: auto; width: 90%; height: 90%; text-align: center;">
+            <div id="fontfam2" style="background:#2c2c2c; border-radius: 10px; margin: auto; width: 90%; height: 95%; text-align: center;">
                 <p style="color: #F0EEEB;font-size: 50; padding-top: 2%;">Tentukan nama link baru anda !</p><br>
                 <div class="container">
                     <div class="row" >
@@ -203,7 +203,7 @@
                     <div class="ninja hide">
                         <center>
                         <P style="color: white; padding-bottom: 2%; font-size: 30px;"> URL anda akan disingkat menjadi : </P>
-                        <input value="32q1tvfr5" placeholder="Masukkan nama link yang anda inginkan" name="tujuan" size="50" required><br><br>
+                        <input value="" placeholder="Masukkan nama link yang anda inginkan" name="tujuan" size="50" required><br><br>
                         <button class="btn btn-lg btn" type="submit" style="color: white; size: 20%;background-color :#2a90d4;" onclick="myFunction()"> Shorten !</button>
                         </center>
                     </div>
