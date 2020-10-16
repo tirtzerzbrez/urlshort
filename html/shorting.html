@@ -42,6 +42,12 @@
         p{
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
+        .hide{
+            visibility: hidden;
+        }
+        .show{
+            visibility: visible;
+        }
         .button2{
             color: whitesmoke;
             padding: 15px 15px;
@@ -93,7 +99,7 @@
                     $("input").val(randomize());
                 }
                 else{
-                    $('.ninja').addClass("hide").removeClass("show");
+                    $("input").val(randomize());
                 }
             }
             function kustom(){
@@ -102,7 +108,7 @@
                     $("input").val("");
                 }
                 else{
-                    $('.ninja').addClass("hide").removeClass("show");
+                    $("input").val("");
                 }
             }
             
@@ -120,7 +126,7 @@
             <div> <!--navbar-->
                 <nav class="navbar navbar-expand-lg navbar-light " style ="background-color :#0f0f0f">
                     <img src="../pic/logo2.png" width="60" height="60" alt="" loading="lazy">
-                    <a class="navbar-brand" href="index.html" style="color: #ffffff; font-size: 1.5em;"><b>TirtZerzBrez</b></a> 
+                    <a class="navbar-brand" href="../index.html" style="color: #ffffff; font-size: 1.5em;"><b>TirtZerzBrez</b></a> 
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                     </button>
@@ -141,9 +147,9 @@
                             <b> Lainnya</b>
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="background-color: black;">
-                                <a href="html/termsofservice.html" type="button" class="button2">Terms of Service</a>
-                                <a href="html/Privacy.html" type="button" class="button2">Privacy</a>
-                                <a href="html/contact.html" type="button" class="button2">Contact</a>
+                                <a href="termsofservice.html" type="button" class="button2">Terms of Service</a>
+                                <a href="Privacy.html" type="button" class="button2">Privacy</a>
+                                <a href="contact.html" type="button" class="button2">Contact</a>
                             </div>
                           </li>
                     </ul>
