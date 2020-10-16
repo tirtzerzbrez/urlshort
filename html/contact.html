@@ -10,14 +10,19 @@
             text-align : center;
             color : orange;
             padding-top : 2%;
-            font-family: Verdana;
+            font-family: Verdana;  
         }
+
         h2{
             text-align : center;
             color:gray;
             padding-top: 20px;
             font-family :Verdana;
         }
+        p{
+                font-family: verdana;
+        }
+
         .urlshort{
             text-align :center;
             padding-top : 1%;
@@ -37,9 +42,8 @@
     .btn-group-center
         {
             text-align :center;
-            background-color: darkslategray;
-            padding-top :2%;
-            padding-bottom:2%;
+            padding-top :0.5%;
+            padding-bottom:0.5%;
         }
 
         #fontfam{
@@ -49,15 +53,25 @@
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
           }
 
+        .button2{
+            color: whitesmoke;
+            padding: 15px 15px;
+            margin: 2px 2px;
+            text-decoration: none;
+        }
+        
+        .button2:hover{
+            color: #2a90d4;
+            text-decoration: none;
+        }
+
+        label{
+          color: white;
+        }
     </style>
 </head>
-<body>
+<body style ="background-color: #141414;">
     <div> <!--link css dan js -->
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-
-        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
@@ -66,44 +80,46 @@
 
         <div id="fontfam">    <!--bagian navbar dan form box-->
           <div> <!--navbar-->
-            <nav class="navbar navbar-expand-lg navbar-light " style ="background-color : orange">
-                <img src="../pic/logo.png" width="30" height="30" alt="" loading="lazy">
-                <a class="navbar-brand" href="../index.html">TirtZerzBrez</a> 
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-                </button>
-    
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav mr-auto">
-                    <li class="nav-item active">
-                    <a class="nav-link" href="../index.html">Beranda <span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item active">
-                    <a class="nav-link" href="petunjuk.html">Petunjuk</a>
-                    </li>
-                    <li class="nav-item active">
-                        <a class="nav-link" href="aboutus.html">Tentang Kami</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                      <a class="button2" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <b>Lainnya</b>
-                      </a>
-                      <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="background-color: black;">
-                          <a href="html/termsofservice.html" type="button" class="button2">Terms of Service</a>
-                          <a href="html/Privacy.html" type="button" class="button2">Privacy</a>
-                          <a href="html/contact.html" type="button" class="button2">Contact</a>
-                      </div>
-                    </li>
-                    </ul>
-            </nav>
+              <nav class="navbar navbar-expand-lg navbar-light " style ="background-color :#0f0f0f">
+                  <img src="../pic/logo2.png" width="60" height="60" alt="" loading="lazy">
+                  <a class="navbar-brand" href="../index.html" style="color: #ffffff; font-size: 1.5em;"><b>TirtZerzBrez</b></a> 
+                  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                  </button>
+  
+                  <div class="collapse navbar-collapse" id="navbarSupportedContent" style="right: 3%; position: absolute;">
+                  <ul class="navbar-nav mr-auto">
+                      <li class="nav-item active">
+                      <a class="button2" href="../index.html"><b>Beranda </b> <span class="sr-only">(current)</span></a>
+                      </li>
+                      <li class="nav-item active">
+                      <a class="button2" href="petunjuk.html"><b>Petunjuk</b></a>
+                      </li>
+                      <li class="nav-item active">
+                      <a class="button2" href="aboutus.html"><b>Tentang Kami</b></a>
+                      </li>
+                      <li class="nav-item dropdown">
+                          <a class="button2" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          <b> Lainnya</b>
+                          </a>
+                          <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="background-color: black;">
+                              <a href="termsofservice.html" type="button" class="button2">Terms of Service</a>
+                              <a href="Privacy.html" type="button" class="button2">Privacy</a>
+                              <a href="contact.html" type="button" class="button2">Contact</a>
+                          </div>
+                        </li>
+                  </ul>
+                  </div>
+              </nav>
           </div>
+      </div>
             <h1> 
                 <a href="../index.html">
                     <img src="../pic/logo2.png" width="200" heigth="200">
                 </a>
             </h1>
             <div>
-                <h3 style="margin-left: 25%; font-size: 2em;">
+                <h3 style="margin-left: 25%; font-size: 2em; color: rgb(24, 163, 228)">
                     Hubungi Kami
                 </h3>
             </div>
