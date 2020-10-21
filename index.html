@@ -73,6 +73,11 @@
             color: #2a90d4;
             text-decoration: none;
         }
+        
+        #container{
+            margin:0px auto 0px auto;
+        }
+
         </style>
     </head>
     <body style ="background-color: #141414;">
@@ -130,12 +135,12 @@
                         <form action="/action_page.php">
                             <label for="homepage"></label>
 
-                            <input type="url" id="homepage" name="homepage" size="80" placeholder="masukkan link disini" style ="border-radius : 10px; height: 50px; margin-left: -19%;"><br><br>
+                            <input type="url" id="homepage" name="homepage" size="80" placeholder="masukkan link disini" style ="border-radius : 10px; height: 50px; margin-left: -19%;" required><br><br>
 
                         </form>
                 <div>
                     <div class = "urlshort">
-                        <a href="html/shorting.html" class="button" role="button" aria-pressed="true" style="text-decoration: none; color: #ffffff; ;">Shorten !</a>
+                        <button type="submit" value="html/shorting.html" class="button" role="button" aria-pressed="true" style="text-decoration: none; color: #ffffff;">Shorten !</button>
                 </div>
                 </form>
             </div>  
