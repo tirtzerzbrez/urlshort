@@ -24,7 +24,7 @@ app.get('/contact',function(req,res){
 })
 
 app.get('/petunjuk',function(req,res){
-    res.render('views/petunjuk');
+    res.render('pages/petunjuk');
 })
 
 app.get('/tos',function(req,res){
