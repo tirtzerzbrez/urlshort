@@ -1,7 +1,10 @@
 var express = require('express');
+var bodyParser = require('body-parser')
 var app = express();
 
 app.set('view engine','ejs');
+app.use(bodyParser.urlencoded({ extended: true}))
+app.use( express.static("views"));
 
 app.get('/',function(req,res){
     res.render('pages/index');
@@ -24,11 +27,22 @@ app.get('/contact',function(req,res){
 })
 
 app.get('/petunjuk',function(req,res){
-    res.render('views/petunjuk');
+    res.render('pages/petunjuk');
 })
 
 app.get('/tos',function(req,res){
     res.render('pages/termofservice');
+})
+
+app.get('/contact',(req,res) => {})
+app.post('/DataDiri', (req,res) =>{
+    console.log(req.body)
+})
+
+app.get('/', (req,res) => {})
+app.post('/linklama', (req,res) => {
+    console.log(req.body);
+    res.redirect('/shorting')
 })
 
 app.listen(5000);

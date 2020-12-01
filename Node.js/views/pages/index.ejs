@@ -124,20 +124,20 @@
                         <img src="pic/logo2.png" width="200" heigth="200">
                     </a>
                 </h1>
-                <form style="background:#2c2c2c; border-radius: 12px; margin: auto; width: 70%; height: 40%;">
+                <form style="background:#2c2c2c; border-radius: 12px; margin: auto; width: 70%; height: 40%;" action="/linklama" method="POST">
                     <h2 style="font:bold 36px asap">Paste Link</h2>
                     <div class = "urlshort">
                         <form action="/action_page.php">
                             <label for="homepage"></label>
 
-                            <input type="url" id="homepage" name="homepage" size="80" placeholder="masukkan link disini" style ="border-radius : 10px; height: 50px; margin-left: -19%;"><br><br>
+                            <input type="url" id="homepage" name="linklama" size="80" placeholder="masukkan link disini" style ="border-radius : 10px; height: 50px; margin-left: -19%;" required><br><br>
 
                         </form>
-                <div>
+                    <div>
                     <div class = "urlshort">
-                        <a href="/shorting" class="button" role="button" aria-pressed="true" style="text-decoration: none; color: #ffffff; ;">Shorten !</a>
+                        <button type="submit" class="button" role="button" aria-pressed="true" style="text-decoration: none; color: #ffffff; ;">Shorten !</button>
                         
-                </div>
+                    </div>
                 </form>
             </div>  
                 
