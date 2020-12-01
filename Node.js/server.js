@@ -33,14 +33,15 @@ app.get('/tos',function(req,res){
     res.render('pages/termofservice');
 })
 
-app.get('/contact', (req, res) => {/*...*/})
+app.get('/contact', (req, res) => {})
 app.post('/DataDiri', (req, res) => {
     console.log(req.body)
 })
 
-app.get('/', (req, res) => {/*...*/})
-app.post('/shorting', (req, res) => {
-    console.log(req.body)
+app.get('/', (req, res) => {})
+app.post('/linklama', (req, res) => {
+    console.log(req.body);
+    res.redirect('/shorting')
 })
 
 app.listen(5000);
