@@ -14,11 +14,6 @@ app.get('/aboutus',function(req,res){
     res.render('pages/aboutus');
 })
 
-app.post('/urllama',function(req,res){
-    console.log(req.body);
-    res.render('pages/shorting');
-})
-
 app.get('/privacy',function(req,res){
     res.render('pages/privacy');
 })
@@ -27,16 +22,21 @@ app.get('/contact',function(req,res){
     res.render('pages/contact');
 })
 
-app.post('/keluhan',function(req,res){
-    console.log(req.body);
-})
-
 app.get('/petunjuk',function(req,res){
     res.render('pages/petunjuk');
 })
 
 app.get('/tos',function(req,res){
     res.render('pages/termofservice');
+})
+
+app.post('/urllama',function(req,res){
+    console.log(req.body);
+    res.render('pages/shorting');
+})
+
+app.post('/keluhan',function(req,res){
+    console.log(req.body);
 })
 
 app.listen(5000);
