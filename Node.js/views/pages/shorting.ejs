@@ -1,0 +1,202 @@
+<html>
+    <head>
+        <title>TirtZerzBrez</title>
+        <style>
+             h1{
+                text-align : center;
+                color : orange;
+                padding-top : 2%;
+                font-family: Verdana;
+            }
+            h2{
+                text-align : center;
+                color:gray;
+                padding-top: 20px;
+                font-family :Verdana;
+            }
+            .urlshort{
+                text-align :center;
+                padding-top : 1%;
+            }
+            .box{
+                border-width: 2px;
+                border-color:red;
+            }
+            .aligncenter{
+            text-align:center
+        }
+        .containermarketing{
+            background-color: #F0EEEB;
+            padding-top : 25px;
+            padding-right : 15px;
+            padding-bottom : 30px;
+        }
+        .btn-group-center
+              {
+                  text-align :center;
+                  padding-top :0.5%;
+                  padding-bottom:0.5%;
+              }
+        #fontfam{
+        font-family:Verdana;}
+        p{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .button2{
+            color: whitesmoke;
+            padding: 15px 15px;
+            margin: 2px 2px;
+            text-decoration: none;
+        }
+        .button2:hover{
+            color: #2a90d4;
+            text-decoration: none;
+        }
+        .button3{
+            color: #2a90d4;
+            background-color: #181818;
+            border-width: 0;
+        }
+        .button3:hover{
+            color: #a4d2f0;
+        }
+        .button3:focus{
+            outline:0;
+            box-shadow: none;
+        }
+        </style>
+        <script>
+            function myFunction() {
+                alert("Error Layanan masih belom tersedia");
+            }
+            function randomize() {
+                function makeid(length) {
+                    var result           = '';
+                    var characters       = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+                    var charactersLength = characters.length;
+                    for ( var i = 0; i < length; i++ ) {
+                    result += characters.charAt(Math.floor(Math.random() * charactersLength));
+                    }
+                    return result;
+                }
+            rng.replace(makeid(5));
+            alert(rng);
+            }
+            function acak(){
+                if($('.ninja').hasClass("hide")){
+                    $('.ninja').removeClass("hide").addClass("show");
+                }
+                else{
+                    $('.ninja').addClass("hide").removeClass("show");
+                    $("input").val("aqwLOP2wf");
+                }
+            }
+            function kustom(){
+                if($('.ninja').hasClass("hide")){
+                    $('.ninja').removeClass("hide").addClass("show");
+                    $("input").val("");
+                }
+                else{
+                    $('.ninja').addClass("hide").removeClass("show");
+                    $("input").val("ju75ryh6a");
+                }
+            }
+            
+        </script>
+    </head>
+    <body style ="background-color: #181818;">
+        <div> <!--link css dan js -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+        </div>
+        <div id="fontfam">    <!--bagian navbar dan form box-->
+            <div> <!--navbar-->
+                <nav class="navbar navbar-expand-lg navbar-light " style ="background-color :#0f0f0f">
+                    <img src="../pic/logo2.png" width="60" height="60" alt="" loading="lazy">
+                    <a class="navbar-brand" href="/" style="color: #ffffff; font-size: 1.5em;"><b>TirtZerzBrez</b></a> 
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent" style="right: 3%; position: absolute;">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active">
+                        <a class="button2" href="/"><b>Beranda </b> <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item active">
+                        <a class="button2" href="/petunjuk"><b>Petunjuk</b></a>
+                        </li>
+                        <li class="nav-item active">
+                        <a class="button2" href="/aboutus"><b>Tentang Kami</b></a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="button2" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <b> Lainnya</b>
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="background-color: black;">
+                                <a href="/tos" type="button" class="button2">Terms of Service</a>
+                                <a href="/privacy" type="button" class="button2">Privacy</a>
+                                <a href="/contact" type="button" class="button2">Contact</a>
+                            </div>
+                          </li>
+                    </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+        <div> <!--bagian tombol tentukan url dan hidden text box-->
+            <h1>
+                <a href="/">
+                    <img src="../pic/logo2.png" width="200" heigth="200">
+                </a>
+            </h1>
+            <div id="fontfam2" style="background:#2c2c2c; border-radius: 10px; margin: auto; width: 90%; height: 90%; text-align: center;">
+                <p style="color: #F0EEEB;font-size: 50; padding-top: 2%;">Tentukan nama link baru anda !</p><br>
+                <div class="container">
+                    <div class="row" >
+                        <div class="col-sm mx-3 px-4 py-3 border rounded" style="background-color: #2a90d4;">
+                            <div class="row">
+                            <div class="col-sm">
+                                <h5 style="color: white; font:bold 23px calibri">
+                                    Tekan tombol dibawah untuk membuat URL dengan nama sesuai keinginan anda !
+                                </h5>
+                                <div class="col-sm mx-auto px-4 py-3 border rounded">
+                                    <button class="btn btn-lg btn-block" style ="background-color :#2a90d4; color: white;"onclick="kustom()">Klik aku!</button>
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+                        <div class="col-sm mx-3 px-4 py-3 border rounded" style ="background-color: #2a90d4;">
+                            <div class="row">
+                            <div class="col-sm px-3">
+                                <h5 style="color: white; font:bold 23px calibri">
+                                    Tekan tombol dibawah untuk membuat URL dengan nama acak
+                                </h5>
+                                <div class="col-sm mx-auto px-4 py-3 border rounded">
+                                    <button class="btn btn-lg btn-block" style ="background-color :#2a90d4; color: white;" onclick="acak()">Klik aku!</button>
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <form style="padding-top: 3%;">
+                    <div class="ninja hide">
+                        <center>
+                        <P style="color: white; padding-bottom: 2%; font-size: 30px;"> URL anda akan disingkat menjadi : </P>
+                        <input value="32q1tvfr5" placeholder="Masukkan nama link yang anda inginkan" name="tujuan" size="50" required><br><br>
+                        <button class="btn btn-lg btn" type="submit" style="color: white; size: 20%;background-color :#2a90d4;" onclick="myFunction()"> Shorten !</button>
+                        </center>
+                    </div>
+                </form>
+            </div>  
+        </div>
+        <div class="btn-group-center" role="group" aria-label="Basic example" style="background-color: black;">
+            <p style ="text-align: center; color:#a7a7a7">TirtZerzBrez 2020-Universitas Tarumanagara</p>
+        </div>
+</body>
+</head>
+</html>
