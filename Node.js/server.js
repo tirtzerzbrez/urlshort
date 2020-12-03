@@ -43,13 +43,13 @@ client.connect(url, { useUnifiedTopology: true })
     const keluhanCollection = db.collection('keluhan');
 
     app.post('/urllama', (req, res) => {
-        dataurlCollection.insertOne(req.body)
-          .then(result => {
-            console.log(result);
-        })
-          .catch(error => console.error(error));
-          res.render('pages/shorting');
-    })
+      dataurlCollection.insertOne(req.body)
+        .then(result => {
+          console.log(result);
+      })
+        .catch(error => console.error(error));
+        res.render('pages/shorting');
+  })
     
     app.post('/urlbaru', (req,res) => {
         dataurlCollection.insertOne(req.body)
