@@ -43,21 +43,16 @@ client.connect(url, { useUnifiedTopology: true })
     const keluhanCollection = db.collection('keluhan');
 
     app.post('/urllama', (req, res) => {
-      dataurlCollection.insertOne(req.body)
-        .then(result => {
-          console.log(result);
-      })
-        .catch(error => console.error(error));
-        res.render('pages/shorting');
+      dataurlCollection.findOneAndUpdate({id : "1"}, {$set: {urllama : req.body}})
+      .then(result => {
+        console.log(result)
+    })
+      .catch(error => console.log(error));
+      res.render('pages/shorting');
   })
     
     app.post('/urlbaru', (req,res) => {
-        dataurlCollection.insertOne(req.body)
-          .then(result => {
-            console.log(result)
-        })
-          .catch(error => console.log(error));
-          res.redirect('/index')
+      
     })
 
     app.post('/keluhan', (req, res) => {
@@ -71,11 +66,11 @@ client.connect(url, { useUnifiedTopology: true })
 
       app.post('/linkbaru', (req, res) =>
       {
-        dataurlCollection.insertOne(req.body)
-          .then(result =>
-          {
-            res.redirect('/')
-          })
-          .catch(error => console.error(error));
+        dataurlCollection.findOneAndUpdate({id : "2"}, {$set: {urlbaru : req.body}})
+      .then(result => {
+        console.log(result)
+    })
+      .catch(error => console.log(error));
+      res.render('pages/index');
       })
   })
