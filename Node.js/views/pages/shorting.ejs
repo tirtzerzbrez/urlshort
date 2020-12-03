@@ -66,10 +66,11 @@
         }
         </style>
         <script>
-            function myFunction() {
+        function myFunction() {
                 alert("Error Layanan masih belom tersedia");
             }
             function randomize() {
+                var x = $("input").val;
                 function makeid(length) {
                     var result           = '';
                     var characters       = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
@@ -79,16 +80,16 @@
                     }
                     return result;
                 }
-            rng.replace(makeid(5));
-            alert(rng);
+            x=makeid(6);
+            return x;
             }
             function acak(){
                 if($('.ninja').hasClass("hide")){
                     $('.ninja').removeClass("hide").addClass("show");
+                    $("input").val(randomize());
                 }
                 else{
-                    $('.ninja').addClass("hide").removeClass("show");
-                    $("input").val("aqwLOP2wf");
+                    $("input").val(randomize());
                 }
             }
             function kustom(){
@@ -97,8 +98,7 @@
                     $("input").val("");
                 }
                 else{
-                    $('.ninja').addClass("hide").removeClass("show");
-                    $("input").val("ju75ryh6a");
+                    $("input").val("");
                 }
             }
             
@@ -186,9 +186,11 @@
                 <form style="padding-top: 3%;">
                     <div class="ninja hide">
                         <center>
-                        <P style="color: white; padding-bottom: 2%; font-size: 30px;"> URL anda akan disingkat menjadi : </P>
-                        <input value="32q1tvfr5" placeholder="Masukkan nama link yang anda inginkan" name="tujuan" size="50" required><br><br>
-                        <button class="btn btn-lg btn" type="submit" style="color: white; size: 20%;background-color :#2a90d4;" onclick="myFunction()"> Shorten !</button>
+                        <form action="/urllama" method="POST">
+                            <P style="color: white; padding-bottom: 2%; font-size: 30px;"> URL anda akan disingkat menjadi : </P>
+                            <input value="32q1tvfr5" placeholder="Masukkan nama link yang anda inginkan" name="tujuan" size="50" required><br><br>
+                            <button class="btn btn-lg btn" role="button" type="submit" style="color: white; size: 20%;background-color :#2a90d4;"> Shorten !</button>
+                        </form>
                         </center>
                     </div>
                 </form>
