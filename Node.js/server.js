@@ -66,5 +66,16 @@ client.connect(url, { useUnifiedTopology: true })
             res.redirect('/contact')
         })
           .catch(error => console.error(error));
-    })
+
+      })
+
+      app.post('/linkbaru', (req, res) =>
+      {
+        dataurlCollection.insertOne(req.body)
+          .then(result =>
+          {
+            res.redirect('/')
+          })
+          .catch(error => console.error(error));
+      })
   })
