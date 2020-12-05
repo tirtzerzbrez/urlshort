@@ -77,12 +77,11 @@
             text-decoration: none;
         }
         </style>
-        <script>
+        <script> 
         function myFunction() {
                 alert("Error Layanan masih belom tersedia");
             }
             function randomize() {
-                var x = $("input").val;
                 function makeid(length) {
                     var result           = '';
                     var characters       = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
@@ -96,22 +95,10 @@
             return x;
             }
             function acak(){
-                if($('.ninja').hasClass("hide")){
-                    $('.ninja').removeClass("hide").addClass("show");
-                    $("input").val(randomize());
-                }
-                else{
-                    $("input").val(randomize());
-                }
+                document.getElementById("inputbawah").innerHTML=randomize();
             }
             function kustom(){
-                if($('.ninja').hasClass("hide")){
-                    $('.ninja').removeClass("hide").addClass("show");
-                    $("input").val("");
-                }
-                else{
-                    $("input").val("");
-                }
+                document.getElementById("inputbawah").innerHTML="";
             }
             
         </script>
@@ -119,9 +106,8 @@
     <body style ="background-color: #181818;">
         <div> <!--link css dan js -->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-
         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
         </div>
         <div id="fontfam">    <!--bagian navbar dan form box-->
@@ -166,66 +152,66 @@
             <p style="font-family:-apple-system; text-align: center;color: antiquewhite;font-size: 23; margin-top: -2%;margin-bottom: 3%; font-weight: 750">Sederhanakan, lacak , dan kelola link anda</p>
         </h1>
         <!-- bagian form masukkan url lama-->
-        <div class="urllama">
-        <form style="background:#2c2c2c; border-radius: 12px; margin: auto; width: 70%; height: 40%; padding-top: -10;" action="/urllama" method="POST">
-            <h2 style="font:bold 36px asap">Paste Link</h2>
-            <div class = "urlshort">
-                <form action="/action_page.php">
-                    <label for="homepage"></label>
+        <form action="/urlpush" method="POST">
+            <div class="urllama">
+            <form style="background:#2c2c2c; border-radius: 12px; margin: auto; width: 70%; height: 40%; padding-top: -10;" action="/urllama" method="POST">
+                <h2 style="font:bold 36px asap">Paste Link</h2>
+                <div class = "urlshort">
+                    <form action="/action_page.php">
+                        <label for="homepage"></label>
 
-                    <input type="url" id="homepage" name="urllama" size="80" placeholder="http://www.something.com/dai1123jsandd=?" style ="border-radius : 10px; height: 50px; margin-left: -5%;" required><br><br>
-                    <button class="button4" role="button">Shorten </button>
-                </form>
-                </form>
-        </div>
-        <br><br><br><br><br><br>
-        <div> <!--bagian tombol tentukan url dan hidden text box-->
-           
-            <div id="fontfam2" style="background:#2c2c2c; border-radius: 10px; margin: auto; width: 90%; height: 90%; text-align: center;">
-                <p style="color: #F0EEEB;font-size: 50; padding-top: 2%;">Tentukan nama link baru anda !</p><br>
-                <div class="container">
-                    <div class="row" >
-                        <div class="col-sm mx-3 px-4 py-3 border rounded" style="background-color: #2a90d4;">
-                            <div class="row">
-                            <div class="col-sm">
-                                <h5 style="color: white; font:bold 23px calibri">
-                                    Tekan tombol dibawah untuk membuat URL dengan nama sesuai keinginan anda !
-                                </h5>
-                                <div class="col-sm mx-auto px-4 py-3 border rounded">
-                                    <button class="btn btn-lg btn-block" style ="background-color :#2a90d4; color: white;"onclick="kustom()">Klik aku!</button>
+                        <input type="url" id="homepage" name="urllama" size="80" placeholder="http://www.something.com/dai1123jsandd=?" style ="border-radius : 10px; height: 50px; margin-left: -5%;" required><br><br>
+                        <button class="button4" role="button">Shorten </button>
+                    </form>
+                    </form>
+            </div>
+            <br><br><br><br><br><br>
+            <div> <!--bagian tombol tentukan url dan hidden text box-->
+            
+                <div id="fontfam2" style="background:#2c2c2c; border-radius: 10px; margin: auto; width: 90%; height: 90%; text-align: center;">
+                    <p style="color: #F0EEEB;font-size: 50; padding-top: 2%;">Tentukan nama link baru anda !</p><br>
+                    <div class="container">
+                        <div class="row" >
+                            <div class="col-sm mx-3 px-4 py-3 border rounded" style="background-color: #2a90d4;">
+                                <div class="row">
+                                <div class="col-sm">
+                                    <h5 style="color: white; font:bold 23px calibri">
+                                        Tekan tombol dibawah untuk membuat URL dengan nama sesuai keinginan anda !
+                                    </h5>
+                                    <div class="col-sm mx-auto px-4 py-3 border rounded">
+                                        <button class="btn btn-lg btn-block" style ="background-color :#2a90d4; color: white;"onclick="kustom()">Klik aku!</button>
+                                    </div>
+                                </div>
                                 </div>
                             </div>
-                            </div>
-                        </div>
-                        <div class="col-sm mx-3 px-4 py-3 border rounded" style ="background-color: #2a90d4;">
-                            <div class="row">
-                            <div class="col-sm px-3">
-                                <h5 style="color: white; font:bold 23px calibri">
-                                    Tekan tombol dibawah untuk membuat URL dengan nama acak
-                                </h5>
-                                <div class="col-sm mx-auto px-4 py-3 border rounded">
-                                    <button class="btn btn-lg btn-block" style ="background-color :#2a90d4; color: white;" onclick="acak()">Klik aku!</button>
+                            <div class="col-sm mx-3 px-4 py-3 border rounded" style ="background-color: #2a90d4;">
+                                <div class="row">
+                                <div class="col-sm px-3">
+                                    <h5 style="color: white; font:bold 23px calibri">
+                                        Tekan tombol dibawah untuk membuat URL dengan nama acak
+                                    </h5>
+                                    <div class="col-sm mx-auto px-4 py-3 border rounded">
+                                        <button class="btn btn-lg btn-block" style ="background-color :#2a90d4; color: white;" onclick="acak()">Klik aku!</button>
+                                    </div>
                                 </div>
-                            </div>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <form style="padding-top: 3%;" action="/linkbaru" method="POST">
-                    <div class="ninja hide">
-                        <center>
+                        <div class="ninja hide">
+                            <center>
 
-                        <P style="color: white; padding-bottom: 2%; font-size: 30px;"> URL anda akan disingkat menjadi : </P>
-                        <input value="32q1tvfr5" placeholder="Masukkan nama link yang anda inginkan" name="tujuan" size="50" required><br><br>
+                            <P style="color: white; padding-bottom: 2%; font-size: 30px;"> URL anda akan disingkat menjadi : </P>
 
-                        <button class="btn btn-lg btn" type="submit" aria-pressed="true" style="color: white; size: 20%;background-color :#2a90d4;"> Shorten !</button>
+                            <input value="32q1tvfr5" id="inputbawah" placeholder="Masukkan nama link yang anda inginkan" name="tujuan" size="50" required><br><br>
+                            <button class="btn btn-lg btn" type="submit" aria-pressed="true" style="color: white; size: 20%;background-color :#2a90d4;"> Shorten !</button>
 
 
-                        </center>
-                    </div>
-                </form>
-            </div>  
-        </div>
+                            </center>
+                        </div>
+                </div>  
+            </div>
+        </form>
         <div class="btn-group-center" role="group" aria-label="Basic example" style="background-color: black;">
             <p style ="text-align: center; color:#a7a7a7">TirtZerzBrez 2020-Universitas Tarumanagara</p>
         </div>
