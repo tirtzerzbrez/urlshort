@@ -22,6 +22,7 @@
                 padding-top : 1%;
                 padding-left:30%;
                 padding-right: 30%;
+                
             }
             .box{
                 border-width: 2px;
@@ -69,6 +70,18 @@
         
         .button2:hover{
             color: #2a90d4;
+            text-decoration: none;
+        }
+        .button3{
+            background-color:  #2a90d4;
+            color: #ffffff;
+            border-radius: 8px;
+            padding: 6% 20%;
+            font-size: 25;
+        }
+        .button3:hover{
+            color: #ffffff;
+            background-color:#1a608f ;
             text-decoration: none;
         }
         </style>
@@ -122,20 +135,11 @@
                         <img src="pic/logo2.png" width="200" heigth="200">
                       
                     </a>
-                    <p style="font-family:-apple-system; text-align: center;color: antiquewhite;font-size: 23; margin-top: -2%;margin-bottom: 2%; font-weight: 750">Sederhanakan, lacak , dan kelola link anda</p>
+                    <p style="font-family:-apple-system; text-align: center;color: antiquewhite;font-size: 23; margin-top: -2%;margin-bottom: 3%; font-weight: 750">Sederhanakan, lacak , dan kelola link anda</p>
                 </h1>
-                <form style="background:#2c2c2c; border-radius: 12px; margin: auto; width: 70%; height: 40%; padding-top: -10;" action="/urllama" method="POST">
-                    <h2 style="font:bold 36px asap">Paste Link</h2>
-                    <div class = "urlshort">
-                        <form action="/action_page.php">
-                            <label for="homepage"></label>
-
-                            <input type="url" id="homepage" name="urllama" size="80" placeholder="http://www.something.com/dai1123jsandd=?" style ="border-radius : 10px; height: 50px; margin-left: -35%;" required><br><br>
-
-                        </form>
                     <div>
                     <div class = "urlshort">
-                        <button type="submit" class="button" role="button" aria-pressed="true" style="text-decoration: none; color: #ffffff; ;">Shorten !</button>
+                       <a class="button3" role="button" href="/shorting" >Mulai !</a>
                         
                     </div>
                 </form>
