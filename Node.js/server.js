@@ -31,7 +31,9 @@ app.get('/petunjuk',function(req,res){
 app.get('/tos',function(req,res){
     res.render('pages/termofservice');
 })
-
+app.get('/shorting',function(req,res){
+  res.render('pages/shorting')
+})
 app.listen(5000);
 console.log("dah nyala nih!!!");
 
