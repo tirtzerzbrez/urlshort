@@ -45,19 +45,39 @@ client.connect(url, { useUnifiedTopology: true })
     const keluhanCollection = db.collection('keluhan');
 
     app.post('/urllama', (req, res) => {
+      dataurlCollection.insertOne(req.body)
+        .then(result => {
+          console.log(result);
+      })
+        .catch(error => console.error(error));
+        res.render('pages/shorting');
+  })
+    
+    app.post('/urlbaru', (req,res) => {
         dataurlCollection.insertOne(req.body)
           .then(result => {
-            console.log(result);
+            console.log(result)
         })
-          .catch(error => console.error(error));
-          res.render('pages/shorting');
-      })
+          .catch(error => console.log(error));
+          res.redirect('/index')
+    })
 
-      app.post('/keluhan', (req, res) => {
+    app.post('/keluhan', (req, res) => {
         keluhanCollection.insertOne(req.body)
           .then(result => {
             res.redirect('/contact')
         })
+          .catch(error => console.error(error));
+
+      })
+
+      app.post('/linkbaru', (req, res) =>
+      {
+        dataurlCollection.insertOne(req.body)
+          .then(result =>
+          {
+            res.redirect('/')
+          })
           .catch(error => console.error(error));
       })
   })
