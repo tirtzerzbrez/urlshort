@@ -64,6 +64,18 @@
             outline:0;
             box-shadow: none;
         }
+        .button4{
+            background-color:  #2a90d4;
+            color: #ffffff;
+            border-radius: 8px;
+            padding: 3% 5%;
+            font-size: 20;
+        }
+        .button4:hover{
+            color: #ffffff;
+            background-color:#1a608f ;
+            text-decoration: none;
+        }
         </style>
         <script async>
         src="https://code.jquery.com/jquery-3.5.1.slim.min.js" 
@@ -149,12 +161,28 @@
                 </nav>
             </div>
         </div>
+        <h1>
+            <a href="/">
+                <img src="../pic/logo2.png" width="200" heigth="200">
+            </a>
+            <p style="font-family:-apple-system; text-align: center;color: antiquewhite;font-size: 23; margin-top: -2%;margin-bottom: 3%; font-weight: 750">Sederhanakan, lacak , dan kelola link anda</p>
+        </h1>
+        <!-- bagian form masukkan url lama-->
+        <div class="urllama">
+        <form style="background:#2c2c2c; border-radius: 12px; margin: auto; width: 70%; height: 40%; padding-top: -10;" action="/urllama" method="POST">
+            <h2 style="font:bold 36px asap">Paste Link</h2>
+            <div class = "urlshort">
+                <form action="/action_page.php">
+                    <label for="homepage"></label>
+
+                    <input type="url" id="homepage" name="urllama" size="80" placeholder="http://www.something.com/dai1123jsandd=?" style ="border-radius : 10px; height: 50px; margin-left: -5%;" required><br><br>
+                    <button class="button4" role="button">Shorten </button>
+                </form>
+                </form>
+        </div>
+        <br><br><br><br><br><br>
         <div> <!--bagian tombol tentukan url dan hidden text box-->
-            <h1>
-                <a href="/">
-                    <img src="../pic/logo2.png" width="200" heigth="200">
-                </a>
-            </h1>
+           
             <div id="fontfam2" style="background:#2c2c2c; border-radius: 10px; margin: auto; width: 90%; height: 90%; text-align: center;">
                 <p style="color: #F0EEEB;font-size: 50; padding-top: 2%;">Tentukan nama link baru anda !</p><br>
                 <div class="container">
@@ -190,8 +218,10 @@
                         <center>
 
                         <P style="color: white; padding-bottom: 2%; font-size: 30px;"> URL anda akan disingkat menjadi : </P>
-                        <input value="32q1tvfr5" placeholder="Masukkan nama link yang anda inginkan" name="urlbaru" size="50" required><br><br>
+
+                        <input value="32q1tvfr5" placeholder="Masukkan nama link yang anda inginkan" name="tujuan" size="50" required><br><br>
                         <button class="btn btn-lg btn" type="submit" aria-pressed="true" style="color: white; size: 20%;background-color :#2a90d4;"> Shorten !</button>
+
 
                         </center>
                     </div>
