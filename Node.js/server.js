@@ -53,8 +53,12 @@ client.connect(url, { useUnifiedTopology: true })
       res.render('pages/shorting');
   })
     
-    app.post('/urlbaru', (req,res) => {
-      
+    app.post('/urlpush', (req,res) => {
+      dataurlCollection.insertOne(req.body)
+        .then(result => {
+          res.render('pages/hasil');
+        })
+        .catch(error => console.log(error));
     })
 
     app.post('/keluhan', (req, res) => {
