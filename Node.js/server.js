@@ -45,6 +45,7 @@ client.connect(url, { useUnifiedTopology: true })
     const keluhanCollection = db.collection('keluhan');
 
     app.post('/urllama', (req, res) => {
+
       dataurlCollection.findOneAndUpdate({id : "1"}, {$set: {urllama : req.body}})
       .then(result => {
         console.log(result)
@@ -62,6 +63,7 @@ client.connect(url, { useUnifiedTopology: true })
     })
 
     app.post('/keluhan', (req, res) => {
+
         keluhanCollection.insertOne(req.body)
           .then(result => {
             res.redirect('/contact')
@@ -78,5 +80,6 @@ client.connect(url, { useUnifiedTopology: true })
     })
       .catch(error => console.log(error));
       res.render('pages/index');
+
       })
   })
