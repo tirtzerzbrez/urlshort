@@ -2,11 +2,14 @@ var express = require('express');
 var app = express();
 var bodyParser = require('body-parser');
 const url = 'mongodb+srv://Arya:ocFtLqEjLzTZY1vg@cluster0.5eb3m.mongodb.net/shorturl?retryWrites=true&w=majority';
+const mongoose = require('mongoose');
 var client = require('mongodb').MongoClient;
 
 app.set('view engine','ejs');
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static("views"));
+app.use(express.urlencoded({extended:false}))
+app.use
 
 app.get('/',function(req,res){
     res.render('pages/index');
@@ -34,6 +37,9 @@ app.get('/tos',function(req,res){
 app.get('/shorting',function(req,res){
   res.render('pages/shorting')
 })
+app.get('/hasil',function(req,res){
+  res.render('pages/hasil')
+})
 app.listen(5000);
 console.log("dah nyala nih!!!");
 
@@ -54,9 +60,18 @@ client.connect(url, { useUnifiedTopology: true })
   })
     
     app.post('/urlpush', (req,res) => {
+      dataurlCollection.findOneAndUpdate({id :"3"},{$set:{urlsementara :req.body}})
       dataurlCollection.insertOne(req.body)
         .then(result => {
-          res.render('pages/hasil');
+          var x = dataurlCollection.findOne({id:"3"}, function(err, result) {
+            if(err){
+              console.log(err);
+          }
+            else{
+              console.log(result.urlsementara.inputbawah);
+          }
+          })
+          res.redirect('/hasil');
         })
         .catch(error => console.log(error));
     })
@@ -80,3 +95,4 @@ client.connect(url, { useUnifiedTopology: true })
       res.render('pages/index');
       })
   })
+  
