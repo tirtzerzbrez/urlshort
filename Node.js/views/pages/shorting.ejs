@@ -64,52 +64,52 @@
             outline:0;
             box-shadow: none;
         }
+
+        .button4{
+            background-color:  #2a90d4;
+            color: #ffffff;
+            border-radius: 8px;
+            padding: 3% 5%;
+            font-size: 20;
+        }
+        .button4:hover{
+            color: #ffffff;
+            background-color:#1a608f ;
+            text-decoration: none;
+        }
+
         </style>
-        <script>
-            function myFunction() {
+        <script> 
+        function myFunction() {
                 alert("Error Layanan masih belom tersedia");
             }
-            function randomize() {
-                function makeid(length) {
-                    var result           = '';
-                    var characters       = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
-                    var charactersLength = characters.length;
-                    for ( var i = 0; i < length; i++ ) {
-                    result += characters.charAt(Math.floor(Math.random() * charactersLength));
-                    }
-                    return result;
+        function randomize() {
+            function makeid(length) {
+                var result           = '';
+                var characters       = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+                var charactersLength = characters.length;
+                for ( var i = 0; i < length; i++ ) {
+                result += characters.charAt(Math.floor(Math.random() * charactersLength));
                 }
-            rng.replace(makeid(5));
-            alert(rng);
+                return result;
             }
-            function acak(){
-                if($('.ninja').hasClass("hide")){
-                    $('.ninja').removeClass("hide").addClass("show");
-                }
-                else{
-                    $('.ninja').addClass("hide").removeClass("show");
-                    $("input").val("aqwLOP2wf");
-                }
-            }
-            function kustom(){
-                if($('.ninja').hasClass("hide")){
-                    $('.ninja').removeClass("hide").addClass("show");
-                    $("input").val("");
-                }
-                else{
-                    $('.ninja').addClass("hide").removeClass("show");
-                    $("input").val("ju75ryh6a");
-                }
-            }
+        x=makeid(6);
+        return x;
+        }
+        function acak(){
+            document.urlall.inputbawah.value = randomize();
+        }
+        function kustom(){
+            document.urlall.inputbawah.value ="";
+        }
             
         </script>
     </head>
     <body style ="background-color: #181818;">
         <div> <!--link css dan js -->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-
         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
         </div>
         <div id="fontfam">    <!--bagian navbar dan form box-->
@@ -147,53 +147,62 @@
                 </nav>
             </div>
         </div>
-        <div> <!--bagian tombol tentukan url dan hidden text box-->
-            <h1>
-                <a href="/">
-                    <img src="../pic/logo2.png" width="200" heigth="200">
-                </a>
-            </h1>
-            <div id="fontfam2" style="background:#2c2c2c; border-radius: 10px; margin: auto; width: 90%; height: 90%; text-align: center;">
-                <p style="color: #F0EEEB;font-size: 50; padding-top: 2%;">Tentukan nama link baru anda !</p><br>
+        <h1>
+            <a href="/">
+                <img src="../pic/logo2.png" width="200" heigth="200">
+            </a>
+            <p style="font-family:-apple-system; text-align: center;color: antiquewhite;font-size: 23; margin-top: -2%;margin-bottom: 3%; font-weight: 750">Sederhanakan, lacak , dan kelola link anda</p>
+        </h1>
+        <!-- bagian form-->
+        <form name="urlall" action="/urlpush" method="POST">
+            <div id="fontfam2" style="background:#2c2c2c; border-radius: 10px; margin: auto; width: 90%; height: 100%; text-align: center;">
+                <div class="urllama"> <!-- bagian form masukkan url lama-->
+                    <p style="color: #F0EEEB;font-size: 50; padding-top: 2%;">Paste Link Anda Disini</p>
+                    <div class = "urlshort">
+                        <input type="url" id="homepage" name="urllama" size="80" placeholder="http://www.something.com/dai1123jsandd=?" style ="border-radius : 10px; height: 50px; padding-left: 2%; padding-right: 5%;" required>
+                    </div>
+                </div>
+                <div> <!--bagian tombol tentukan url-->
+                <p style="color: #F0EEEB;font-size: 50; padding-top: 2%;">Tentukan nama link baru anda !</p>
                 <div class="container">
                     <div class="row" >
                         <div class="col-sm mx-3 px-4 py-3 border rounded" style="background-color: #2a90d4;">
                             <div class="row">
-                            <div class="col-sm">
-                                <h5 style="color: white; font:bold 23px calibri">
-                                    Tekan tombol dibawah untuk membuat URL dengan nama sesuai keinginan anda !
-                                </h5>
-                                <div class="col-sm mx-auto px-4 py-3 border rounded">
-                                    <button class="btn btn-lg btn-block" style ="background-color :#2a90d4; color: white;"onclick="kustom()">Klik aku!</button>
+                                <div class="col-sm">
+                                    <h5 style="color: white; font:bold 23px calibri">
+                                        Tekan tombol dibawah untuk membuat URL dengan nama sesuai keinginan anda !
+                                    </h5>
+                                    <div class="col-sm mx-auto px-4 py-3 border rounded">
+                                        <button class="btn btn-lg btn-block" style ="background-color :#2a90d4; color: white;"onclick="kustom()" type="button">Klik aku!</button>
+                                    </div>
                                 </div>
-                            </div>
                             </div>
                         </div>
                         <div class="col-sm mx-3 px-4 py-3 border rounded" style ="background-color: #2a90d4;">
                             <div class="row">
-                            <div class="col-sm px-3">
-                                <h5 style="color: white; font:bold 23px calibri">
-                                    Tekan tombol dibawah untuk membuat URL dengan nama acak
-                                </h5>
-                                <div class="col-sm mx-auto px-4 py-3 border rounded">
-                                    <button class="btn btn-lg btn-block" style ="background-color :#2a90d4; color: white;" onclick="acak()">Klik aku!</button>
+                                <div class="col-sm px-3">
+                                    <h5 style="color: white; font:bold 23px calibri">
+                                        Tekan tombol dibawah untuk membuat URL dengan nama acak
+                                    </h5>
+                                    <div class="col-sm mx-auto px-4 py-3 border rounded">
+                                        <button class="btn btn-lg btn-block" style ="background-color :#2a90d4; color: white;" onclick="acak()" type="button">Klik aku!</button>
+                                    </div>
                                 </div>
-                            </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <form style="padding-top: 3%;">
                     <div class="ninja hide">
                         <center>
-                        <P style="color: white; padding-bottom: 2%; font-size: 30px;"> URL anda akan disingkat menjadi : </P>
-                        <input value="32q1tvfr5" placeholder="Masukkan nama link yang anda inginkan" name="tujuan" size="50" required><br><br>
-                        <button class="btn btn-lg btn" type="submit" style="color: white; size: 20%;background-color :#2a90d4;" onclick="myFunction()"> Shorten !</button>
+                        <P style="color: white; font-size: 30px;"> URL anda akan disingkat menjadi : </P>
+                        <input value="32q1tvfr5" name="inputbawah" placeholder="Masukkan nama link yang anda inginkan" name="tujuan" size="50" required><br><br>
+                        <button class="btn btn-lg btn" type="submit" aria-pressed="true" style="color: white; size: 20%;background-color :#2a90d4;"> Shorten !</button>
                         </center>
                     </div>
-                </form>
-            </div>  
-        </div>
+                </div>  
+            </div>
+        </form>
+        
         <div class="btn-group-center" role="group" aria-label="Basic example" style="background-color: black;">
             <p style ="text-align: center; color:#a7a7a7">TirtZerzBrez 2020-Universitas Tarumanagara</p>
         </div>

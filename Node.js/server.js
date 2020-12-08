@@ -31,7 +31,9 @@ app.get('/petunjuk',function(req,res){
 app.get('/tos',function(req,res){
     res.render('pages/termofservice');
 })
-
+app.get('/shorting',function(req,res){
+  res.render('pages/shorting')
+})
 app.listen(5000);
 console.log("dah nyala nih!!!");
 
@@ -43,19 +45,41 @@ client.connect(url, { useUnifiedTopology: true })
     const keluhanCollection = db.collection('keluhan');
 
     app.post('/urllama', (req, res) => {
-        dataurlCollection.insertOne(req.body)
-          .then(result => {
-            console.log(result);
-        })
-          .catch(error => console.error(error));
-          res.render('pages/shorting');
-      })
 
-      app.post('/keluhan', (req, res) => {
+      dataurlCollection.findOneAndUpdate({id : "1"}, {$set: {urllama : req.body}})
+      .then(result => {
+        console.log(result)
+    })
+      .catch(error => console.log(error));
+      res.render('pages/shorting');
+  })
+    
+    app.post('/urlpush', (req,res) => {
+      dataurlCollection.insertOne(req.body)
+        .then(result => {
+          res.render('pages/hasil');
+        })
+        .catch(error => console.log(error));
+    })
+
+    app.post('/keluhan', (req, res) => {
+
         keluhanCollection.insertOne(req.body)
           .then(result => {
             res.redirect('/contact')
         })
           .catch(error => console.error(error));
+
+      })
+
+      app.post('/linkbaru', (req, res) =>
+      {
+        dataurlCollection.findOneAndUpdate({id : "2"}, {$set: {urlbaru : req.body}})
+      .then(result => {
+        console.log(result)
+    })
+      .catch(error => console.log(error));
+      res.render('pages/index');
+
       })
   })
