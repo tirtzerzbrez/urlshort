@@ -51,6 +51,7 @@ client.connect(url, { useUnifiedTopology: true })
     const db = client.db('shorturl');
     const dataurlCollection = db.collection('dataurl');
     const keluhanCollection = db.collection('keluhan');
+
     var x = dataurlCollection.findOne({id:"3",urllama:0})
     app.get('/hasil', (req, res) => {
       db.collection('dataurl').findOne({id:"3",urllama:0})
@@ -91,6 +92,7 @@ client.connect(url, { useUnifiedTopology: true })
       })
     })
     app.post('/keluhan', (req, res) => {
+
         keluhanCollection.insertOne(req.body)
           .then(result => {
             res.redirect('/contact')
@@ -107,5 +109,6 @@ client.connect(url, { useUnifiedTopology: true })
     })
       .catch(error => console.log(error));
       res.render('pages/index');
+
       })
   })
