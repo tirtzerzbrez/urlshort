@@ -39,9 +39,7 @@ app.get('/tos',function(req,res){
 app.get('/shorting',function(req,res){
   res.render('pages/shorting')
 })
-app.get('/hasil',function(req,res){
-  res.render('pages/hasil')
-})
+
 app.listen(5000);
 console.log("dah nyala nih!!!");
 
@@ -51,25 +49,27 @@ client.connect(url, { useUnifiedTopology: true })
     const db = client.db('shorturl');
     const dataurlCollection = db.collection('dataurl');
     const keluhanCollection = db.collection('keluhan');
-    var x = dataurlCollection.findOne({id:"3",urllama:0})
-    app.get('/hasil', (req, res) => {
-      db.collection('dataurl').findOne({id:"3",urllama:0})
-        .then(x => {
-          res.render('hasil.ejs', { x })
-        }) 
+
+    app.get('/hasil',function(req,res){
+      db.collection('dataurl').find({id :"3"}).toArray()
+      .then(results => {
+        console.log(results);
+        res.render('pages/hasil', { dataurl: results});
+      })
+      .catch(error => console.log(error));
     })
-    app.locals.myVar = x;
 
   app.get('/:shortid', async (req, res) => {
     const shortid = req.params.shortid
-    const rec = await dataurlCollection.findOne({ inputbawah:shortid})
+    const rec = await dataurlCollection.findOne({inputbawah:shortid})
     if (!rec) {return res.sendStatus(404)}
     else{
     res.redirect(rec.urllama)
     }
+    
   })
     app.post('/urlpush', (req,res) => {
-      dataurlCollection.findOneAndUpdate({id :"3"},{$set:{urlsementara :req.body}})
+      dataurlCollection.findOneAndUpdate({id :"3"},{$set:{urlsementara :req.body.inputbawah}})
       dataurlCollection.insertOne(req.body)
         .then(result => {
           var x = dataurlCollection.findOne({id:"3"}, function(err, result) {
@@ -77,13 +77,14 @@ client.connect(url, { useUnifiedTopology: true })
               console.log(err);
           }
             else{
-              console.log(result.urlsementara.inputbawah);
+              console.log(result.urlsementara);
           }
           })
           res.redirect('/hasil');
         })
         .catch(error => console.log(error));
     })
+    
     app.get('/urlpush',(req,res,next)=> {
       dataurlCollection.find({},function(err,result){
         if(err)throw err
@@ -91,6 +92,7 @@ client.connect(url, { useUnifiedTopology: true })
       })
     })
     app.post('/keluhan', (req, res) => {
+
         keluhanCollection.insertOne(req.body)
           .then(result => {
             res.redirect('/contact')
@@ -107,5 +109,6 @@ client.connect(url, { useUnifiedTopology: true })
     })
       .catch(error => console.log(error));
       res.render('pages/index');
+
       })
   })
